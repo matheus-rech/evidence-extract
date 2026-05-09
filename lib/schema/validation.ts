@@ -30,7 +30,12 @@ export function validationSummary(errors: ErrorObject[]): string {
 
 export function parseJsonArray<T>(value: FormDataEntryValue | null, fallback: T[]): T[] {
   if (typeof value !== 'string' || value.trim() === '') return fallback;
-  const parsed = JSON.parse(value) as unknown;
+  try {
+    const parsed = JSON.parse(value) as unknown;
+    return Array.isArray(parsed) ? (parsed as T[]) : fallback;
+  } catch {
+    return fallback;
+  }
   return Array.isArray(parsed) ? (parsed as T[]) : fallback;
 }
 
