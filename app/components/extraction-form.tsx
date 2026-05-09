@@ -5,7 +5,7 @@ import { useFormStatus } from 'react-dom';
 import { saveExtraction } from '@/app/actions/extractions';
 import type { ExtractionPayload } from '@/lib/schema/extraction-schema';
 
-type Props = { documentId: string; initial: Record<string, unknown> | null };
+type Props = { documentId: string; initial: ExtractionPayload | null };
 
 type FormState = { message: string; saved: boolean };
 
