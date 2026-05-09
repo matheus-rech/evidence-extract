@@ -18,7 +18,7 @@ export async function saveExtraction(documentId: string, payload: ExtractionPayl
   }
 
   return withUserSupabase(async ({ supabase, userClaims }) => {
-    const db = supabase as any;
+    const db = supabase;
     const reviewerId = userClaims?.id;
     if (!reviewerId) return { ok: false, message: 'Authenticated reviewer is required.' };
 
