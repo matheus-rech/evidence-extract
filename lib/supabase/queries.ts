@@ -1,9 +1,10 @@
 import { withUserSupabase } from './server';
+import type { ExtractionPayload } from '@/lib/schema/extraction-schema';
 
 type DocumentRow = {
   id: string;
   title: string;
-  latestExtraction: Record<string, unknown> | null;
+  latestExtraction: ExtractionPayload | null;
 };
 
 export async function getDocumentWithExtractions(documentId: string): Promise<DocumentRow> {
