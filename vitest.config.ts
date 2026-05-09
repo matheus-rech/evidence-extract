@@ -8,6 +8,9 @@ export default defineConfig({
     }
   },
   test: {
-    environment: 'node'
+    environment: 'node',
+    pool: 'vmThreads',
+    maxWorkers: 1,
+    exclude: ['node_modules/**', '.next/**', 'tests/e2e/**']
   }
 });
