@@ -111,7 +111,7 @@ export const getDocumentWithExtractions = cache(async (documentId: string): Prom
       ? (
           await db.storage
             .from('documents')
-            .createSignedUrl(storagePath, 60 * 20)
+            .createSignedUrl(storagePath, 60 * 60)
         ).data?.signedUrl ?? null
       : null;
 
