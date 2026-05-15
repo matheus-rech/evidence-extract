@@ -27,7 +27,7 @@ If you want an action to run outside the primary app/runtime (so heavy jobs donâ
 - **Job broker**: queue/topic with idempotency key.
 - **Worker runtime**: containerized pipeline runner.
 - **Artifact store**: S3/GCS/Azure Blob for parquet/csv/xlsx + logs.
-- **Status store**: run state (`queued`, `running`, `failed`, `complete`) + timestamps.
+- **Status store**: run state (queued, running, failed, completed) + timestamps.
 - **Notification path**: webhook/email/Slack on completion/failure.
 
 ## Suggested first implementation
