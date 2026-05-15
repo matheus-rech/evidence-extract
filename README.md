@@ -2,7 +2,7 @@
 
 ## Secondary execution/service patterns (ideas)
 
-If you want an action to run outside the primary app/runtime (so heavy jobs don’t block local flow), these are practical patterns:
+If you want an action to run outside the primary app/runtime (so heavy jobs don’t block the main application flow), these are practical patterns:
 
 1. **Queue + worker (recommended default)**
    - Primary app validates request and pushes a job to a queue (SQS, RabbitMQ, Redis, Pub/Sub).
