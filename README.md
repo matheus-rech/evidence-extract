@@ -26,7 +26,7 @@ If you want an action to run outside the primary app/runtime (so heavy jobs donâ
 - **Primary API**: receives action request, stores run metadata.
 - **Job broker**: queue/topic with idempotency key.
 - **Worker runtime**: containerized pipeline runner.
-- **Artifact store**: S3/GCS/Azure Blob for parquet/csv/xlsx + logs.
+- **Artifact store**: S3/GCS/Azure Blob for Parquet/CSV/XLSX + logs.
 - **Status store**: run state (queued, running, failed, completed) + timestamps.
 - **Notification path**: webhook/email/Slack on completion/failure.
 
